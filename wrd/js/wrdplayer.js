@@ -12,7 +12,7 @@
 	    type: "/;type=mp3",
             streampath: "/stream?icy=http",			
 	    enable_cors: false,
-	    cors: "https://zet.pluginsandthemes.ro",			
+	    cors: "https://plugstream.herokuapp.com",			
 	    artwork: true,
             logo: "https://warningfm.github.io/v3/images/1d205655ef29e14a8255c89fe2383a41.jpg",
 	    servertitle: "My Radio Title", //For Shoutcast v1 server
