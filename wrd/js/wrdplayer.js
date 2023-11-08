@@ -12,7 +12,7 @@
 			type: "/;type=mp3",
             streampath: "/stream?icy=http",			
 			enable_cors: false,
-			cors: "https://corsradio.herokuapp.com",			
+			cors: "https://plugstream.herokuapp.com",			
 			artwork: true,
             logo: "../img/logo.jpg",
 			servertitle: "My Radio Title", //For Shoutcast v1 server
