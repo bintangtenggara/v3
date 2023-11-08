@@ -179,7 +179,7 @@
 				
 				function yql(a,b)
 				{
-					return 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num='+encodeURIComponent('select * from '+b+' where url=\"'+a+'\" limit '+params.feedcount)+'&format=json';
+					return 'http://query.yahooapis.com/v1/public/yql?q='+encodeURIComponent('select * from '+b+' where url=\"'+a+'\" limit '+params.feedcount)+'&format=json';
 				};
 				
 				function getRSS()
