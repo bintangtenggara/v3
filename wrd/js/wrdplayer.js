@@ -1,4 +1,4 @@
-/*! iCast - Shoutcast & Icecast Web Player v1.2 - (c) 2018, Diego Navarro [dgone1988@gmail.com] */
+/*! nng - Shoutcast & Icecast Web Player v1.4 - (c) 2018, https://www.mbahnunungonline.net */
 (function ($) {
     "use strict";
 	$(".icast").append('');
@@ -6,16 +6,16 @@
         var settings = $.extend({
             // Default Settings
             URL: "",
-			version: "2",
+	    version: "2",
             stream_id: 1,
-			mount_point: "", //For Icecast server
-			type: "/;type=mp3",
+	    mount_point: "", //For Icecast server
+	    type: "/;type=mp3",
             streampath: "/stream?icy=http",			
-			enable_cors: false,
-			cors: "https://plugstream.herokuapp.com",			
-			artwork: true,
-            logo: "../img/logo.jpg",
-			servertitle: "My Radio Title", //For Shoutcast v1 server
+	    enable_cors: false,
+	    cors: "https://zet.pluginsandthemes.ro",			
+	    artwork: true,
+            logo: "https://warningfm.github.io/v3/images/1d205655ef29e14a8255c89fe2383a41.jpg",
+	    servertitle: "My Radio Title", //For Shoutcast v1 server
             show_listeners: true,    
             src: "",
             volume: 0.95,			
@@ -46,8 +46,8 @@
             if(settings.version == 1) {
                 audio.src = settings.URL + "/;type=mp3";
                 settings.src = audio.src;				
-                var dataURL = settings.cors + "?q=" + settings.URL + "/7.html";
-                var hisURL = settings.cors + "?q=" + settings.URL + "/played.html";
+                var dataURL = settings.cors + "/" + settings.URL + "/7.html";
+                var hisURL = settings.cors + "/" + settings.URL + "/played.html";
                 getSH(dataURL, hisURL);
             }
 
@@ -55,8 +55,8 @@
 				audio.src = settings.URL + settings.streampath;
 				settings.src = audio.src;
 				if(settings.enable_cors == true) {
-					var dataURL = settings.cors + "?q=" + settings.URL + "/stats?sid="+ settings.stream_id +"&json=1&callback=?";
-					var hisURL = settings.cors + "?q=" + settings.URL + "/played?sid="+ settings.stream_id +"&type=json&callback=?";
+					var dataURL = settings.cors + "/" + settings.URL + "/stats?sid="+ settings.stream_id +"&json=1&callback=?";
+					var hisURL = settings.cors + "/" + settings.URL + "/played?sid="+ settings.stream_id +"&type=json&callback=?";
 				}
 				else {
 					var dataURL = settings.URL + "/stats?sid="+ settings.stream_id +"&json=1&callback=?";
@@ -68,7 +68,7 @@
             else if(settings.version == "icecast") {
                 audio.src = settings.URL + "/" + settings.mount_point;
                 settings.src = audio.src;
-				var dataURL = settings.cors + "?q=" + settings.URL + "/status-json.xsl";
+		var dataURL = settings.cors + "/" + settings.URL + "/status-json.xsl";
                 getIC(dataURL);				
             }
         });
@@ -172,7 +172,7 @@
 		//Format title and artist for album cover gathering
 		function formatArtist(artist){
             artist = artist.toLowerCase();			
-			artist = $.trim(artist);
+		artist = $.trim(artist);
             if (artist.includes("&")) {
                  artist = artist.substr(0, artist.indexOf(' &'));				
             }
@@ -187,7 +187,7 @@
 		
 		function formatTitle(title){
             title = title.toLowerCase();            
-			title = $.trim(title);
+		title = $.trim(title);
             if (title.includes("&")) {
                 title = title.replace('&', 'and');				
             }
@@ -202,16 +202,16 @@
 		
         function getSH(url, sHistory) {
 		    if(settings.version == 1) {
-			    function foo() {
+			function foo() {
                     $.ajax ({
 				    type: 'GET',
                     dataType: 'html',
                     url: url,
                     success: 
                         function(data) {						
-					        var result = $.parseHTML(data)[1].data;
-						    var songtitle  = result.split(",")[6];
-					        if (songtitle != getTag()) {
+				var result = $.parseHTML(data)[1].data;
+				var songtitle  = result.split(",")[6];
+				if (songtitle != getTag()) {
                                 updateTag(songtitle);
                                 var songtitleSplit = songtitle.split('-');
                                 var artist = songtitleSplit[0];
@@ -220,8 +220,8 @@
                                 updateTitle(title);
                                 updateServerInfo(result);
                                 if (settings.artwork == true) { 
-									getCover(artist, title); 
-								};
+				getCover(artist, title); 
+				};
                                 updateHistoryIC(artist, title);
                                 FBShare(result);
                                 TWShare2(result);								
@@ -248,14 +248,14 @@
                                 var songtitleSplit = songtitle.split('-');
                                 var artist = songtitleSplit[0];
                                 var title = songtitleSplit[1];
-								var servertitle = result.servertitle;
+				                var servertitle = result.servertitle;
                                 updateArtist(artist);
                                 updateTitle(title);
                                 updateServerInfo(result);
-								updateHistory(sHistory);
+				                updateHistory(sHistory);
                                 if (settings.artwork == true) { 
-									getCover(artist, title); 
-								};
+				                getCover(artist, title); 
+				};
                                 FBShare(result);
                                 TWShare(result);								
                             }
@@ -275,25 +275,25 @@
 			    function foo() {
                     $.ajax ({
                     dataType: 'json',
-                    url: settings.cors + "/?q=" + settings.URL + "/status-json.xsl",
+                    url: settings.cors + "/" + settings.URL + "/status-json.xsl",
                     success:					
                         function(data) {
                             var result = findMPData(data);
                             if (result.title != getTag()) {
                                 updateTag(result.title);
-						        var songtitle = result.title;
+				var songtitle = result.title;
                                 var songtitleSplit = songtitle.split('-');
                                 var artist = songtitleSplit[0];
                                 var title = songtitleSplit[1];
                                 updateArtist(artist);
                                 updateTitle(title);
-						        if (settings.artwork == true) { 
-									getCover(artist, title); 
-								};
+				if (settings.artwork == true) { 
+				getCover(artist, title); 
+				};
                                 updateServerInfoIC(result);
-								updateHistoryIC(artist, title);
-								FBShare(result);
-								TWShare3(result);
+				updateHistoryIC(artist, title);
+				FBShare(result);
+				TWShare3(result);
                             }
                         },
 					error: 
@@ -342,8 +342,8 @@
 		
 		//Album Cover Handling
 		function getCover(artist, title) {		
-			artist = formatArtist(artist);
-			title = formatTitle(title);
+		artist = formatArtist(artist);
+		title = formatTitle(title);
             artist = encodeURI(artist);
             title = encodeURI(title);	
             var url = "https://itunes.apple.com/search?term==" + artist + "-" + title + "&media=music&limit=1";
@@ -397,33 +397,33 @@
     			else if(settings.version == 2){
     				$(".row-wpr").remove();
 
-							doCORSRequest({
-								  method: 'GET',
-								  url: url/*,
-								  data: dataField.value*/
-							}, function printResult(result) {    
+				doCORSRequest({
+				method: 'GET',
+				url: url/*,
+					data: dataField.value*/
+					}, function printResult(result) {    
     						            
                             //console.log("history: " + result);
                             var startPoint=result.indexOf("([{")+1;
-														var lengthPoint=result.indexOf("}])")-startPoint+2;
-														var historystring=result.substr(startPoint,lengthPoint);
+			    var lengthPoint=result.indexOf("}])")-startPoint+2;
+			    var historystring=result.substr(startPoint,lengthPoint);
                             //console.log("history after: " + historystring);
                             var historyarray=jQuery.parseJSON(historystring);
                             //console.log("row: " + historyarray[0].title);
                             for (var i = 1; i < 6; i++) {
                                 var rowNum = i;
-    							              var listVal = rowNum;
+    				var listVal = rowNum;
                                 
                                 var songtitle = historyarray[i].title;
-    							              var songtitleSplit = songtitle.split('-');
+    				var songtitleSplit = songtitle.split('-');
                                 var artist = songtitleSplit[0];
                                 var title = songtitleSplit[1];
                                 $(".history-wpr").append(
-    								            "<div class='row-wpr'><div class='history-cover' id='row" + rowNum +"'></div><div class='history-track-info'><div class='history-songtitle'>" + title + "</div><div class='history-artist-name'>"+ artist + "</div></div><div class='rowNum'>"+ listVal + "</div></div>"
+    					"<div class='row-wpr'><div class='history-cover' id='row" + rowNum +"'></div><div class='history-track-info'><div class='history-songtitle'>" + title + "</div><div class='history-artist-name'>"+ artist + "</div></div><div class='rowNum'>"+ listVal + "</div></div>"
                                 );
     							
-                  							getImageList(artist, title, rowNum);
-                  							console.log("Play: "+artist+" - "+title);
+                  		getImageList(artist, title, rowNum);
+                  		console.log("Play: "+artist+" - "+title);
                             }
  
               });
@@ -433,8 +433,8 @@
 		
 		
 		function getImageList(artist, title, i) {
-			artist = formatArtist(artist);
-			title = formatTitle(title);
+		artist = formatArtist(artist);
+		title = formatTitle(title);
             artist = encodeURI(artist);
             title = encodeURI(title);	
             var url = "https://itunes.apple.com/search?term==" + artist + "-" + title + "&media=music&limit=1";
@@ -443,7 +443,7 @@
                 url: url,
                 success:
                     function(data) {
-						if (data.results.length == 1){							
+				if (data.results.length == 1){							
                             cover = data.results[0].artworkUrl100;
                             cover = cover.replace('100x100', '400x400');
 					    }
@@ -471,17 +471,17 @@
                             var result = findMPData(data);
                             if (result.title != getTag()) {
                                 updateTag(result.title);
-						        var songtitle = result.title;
+				var songtitle = result.title;
                                 var songtitleSplit = songtitle.split('-');
                                 var artist = songtitleSplit[0];
                                 var title = songtitleSplit[1];
                                 updateArtist(artist);
                                 updateTitle(title);
-						        getCover(artist, title);
+				getCover(artist, title);
                                 updateServerInfoIC(result);
-								updateHistoryIC(artist, title);
-								FBShare(result);
-								TWShare3(result);
+				updateHistoryIC(artist, title);
+				FBShare(result);
+				TWShare3(result);
                             }
                         }
                    })	
@@ -527,7 +527,7 @@
 			$(".row-wpr", thisObj).remove();
             for(var i = 1; i < icHis.length; i++){
                 var rowNum = i;
-				var listVal = rowNum;
+		var listVal = rowNum;
                 var artist = icHis[i].ar;
                 var title = icHis[i].tt;
                 $(".history-wpr", thisObj).append(
@@ -591,7 +591,7 @@
   
   // CORSRequest    
 	function doCORSRequest(options, printResult) {
-		var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+		var cors_api_url = 'https://plugstream.herokuapp.com/';
 		//var cors_api_url = 'https://crossorigin.me/';
 		var x = new XMLHttpRequest();
 		x.open(options.method, cors_api_url + options.url);
