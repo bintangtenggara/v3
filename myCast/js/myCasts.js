@@ -11,7 +11,7 @@
 			mount_point: "", //For Icecast
 			type: "/;type=mp3",
             streampath: "/stream?icy=http",
-			cors: "https://cors-anywhere.herokuapp.com",
+			cors: "https://plugstream.herokuapp.com/",
             logo: "img/nocover.png",
 			vertical_layout: true,
             bg: "grey",
