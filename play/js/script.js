@@ -133,7 +133,7 @@ function Page() {
                 var data = JSON.parse(this.responseText);
                 var artworkUrl100 = (data.resultCount) ? data.results[0].artworkUrl100 : urlCoverArt;
 
-                // Se retornar algum dado, alterar a resolução da imagem ou definir a padrão
+                // Se retornar algum dado, alterar a resoluÃ§Ã£o da imagem ou definir a padrÃ£o
                 urlCoverArt = (artworkUrl100 != urlCoverArt) ? artworkUrl100.replace('100x100bb', '512x512bb') : urlCoverArt;
                 var urlCoverArt96 = (artworkUrl100 != urlCoverArt) ? urlCoverArt.replace('512x512bb', '96x96bb') : urlCoverArt;
                 var urlCoverArt128 = (artworkUrl100 != urlCoverArt) ? urlCoverArt.replace('512x512bb', '128x128bb') : urlCoverArt;
@@ -181,7 +181,7 @@ function Page() {
                             },
                             {
                                 src: urlCoverArt,
-                                sizes: '512x512',
+                                sizes: '640x640',
                                 type: 'image/png'
                             }
                         ]
@@ -242,7 +242,8 @@ function Page() {
     }
 }
 
-var audio = new Audio(URL_STREAMING);
+var audio = new Audio(URL_STREAMING + '/rbtfm');
+//var audio = new Audio(URL_STREAMING);
 
 // Player control
 function Player() {
