@@ -10,7 +10,7 @@
             stream_id: 1,
 			mount_point: "", //For Icecast server
 			type: "/;type=mp3",
-            streampath: "/stream?icy=http",			
+            streampath: "/rbtfm?icy=https",			
 			enable_cors: false,
 			cors: "https://plugstream.herokuapp.com",			
 			artwork: true,
