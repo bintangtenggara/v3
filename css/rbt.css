@@ -57,7 +57,7 @@ body {
 .cover-album {
     max-width: 80%;
     margin: auto;
-    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4pLZ6UZD7M7YOy8wt0HjrjfsWFRdvvSbTGcUrS1eVLnHn0WkbWoFpCngrP9JVut-MrAKMaJ8InHV_X9rS2sozxCSkuK3YiQFfsPRT8JT08w5W25PpJY8wXGB9YAlRm4X12hAqM1QICc84AdW9wf-3Nv9Hm9r7wZ5n6J44efww6bHoZlKDj5j0iNw07YYr/s1600/bg-cover.jpg') no-repeat;
+    background: url('https://warningfm.github.io/v3/img/nocoverart.jpg') no-repeat;
     background-size: cover;
     border: 1px solid #fefefe;
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.4);
@@ -270,7 +270,7 @@ input[type=range]::-ms-thumb {
     margin-right: 15px;
     float: left;
     border-radius: 10px;
-    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4pLZ6UZD7M7YOy8wt0HjrjfsWFRdvvSbTGcUrS1eVLnHn0WkbWoFpCngrP9JVut-MrAKMaJ8InHV_X9rS2sozxCSkuK3YiQFfsPRT8JT08w5W25PpJY8wXGB9YAlRm4X12hAqM1QICc84AdW9wf-3Nv9Hm9r7wZ5n6J44efww6bHoZlKDj5j0iNw07YYr/s1600/bg-cover.jpg') no-repeat;
+    background: url('https://warningfm.github.io/v3/img/nocoverart.jpg') no-repeat;
     background-size: cover;
     border: 2px solid #fefefe;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
