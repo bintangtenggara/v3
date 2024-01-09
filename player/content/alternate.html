@@ -21,23 +21,25 @@
                     instanceName:"alternate",
                     sourcePath:"",
                     activePlaylist:".playlist1",
-                    volume:0.7,
+                    volume:0.9,
                     autoPlay:true,
-                    useScroll:false,
                     useScroll:true,
                     scrollOrientation:"vertical",
                     scrollTheme:"minimal-dark",
-                    facebookAppId:"644413448983338",
-                    lastPlayedInterval:10000,
+                    facebookAppId:"",
+                    lastPlayedInterval:5000,
                     createHistoryList:true,
                     getHistoryArtwork:true,
-                    defaultHistoryArtwork: "data/default_artwork/star_small.png",
+                    defaultHistoryArtwork: "data/default_artwork/bg-cover.jpg",
                     getPlayerArtwork:true,
-                    defaultPlayerArtwork: "data/default_artwork/star.png",
+                    defaultPlayerArtwork: "data/default_artwork/bg-cover.jpg", 
+                    defaultSongArtist: "Bintang Tenggara", 
+                    defaultSongTitle: "FM 95.6 MHz", 
+                    createRadioList:false,
                     enableCors:false,
-                    cors: "https://plugstream.herokuapp.com",
-
-                    createRadioList:true,
+                    cors: "https://cors.mediastreaming.it/",
+                    
+                    
                 };
 
                 $("#mrp-wrapper").mrp(settings);
