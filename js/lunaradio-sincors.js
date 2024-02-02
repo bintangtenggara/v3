@@ -1,5 +1,5 @@
 /*!
-* LUNA RADIO PLAYER V6.22.09.23
+* LUNA RADIO PLAYER - CHAN / CHAN STUDIOS
 * https://www.luna-universe.com
 *
 * Copyright (C) SODAH | JOERG KRUEGER
