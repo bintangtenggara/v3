@@ -67,17 +67,17 @@ userinterface:"big", backgroundcolor:"#000000", fontcolor:"#ffffff", hightlightc
 <script>
 function reloj() {
 let elementoID = document.getElementById('relogio');
-let horalocal = new Date().toLocaleTimeString('es');
+let horalocal = new Date().toLocaleTimeString('id');
 elementoID.innerHTML = horalocal;
 }
-setInterval(reloj, 1000);
+setInterval(reloj, 60000);
 </script>
 </div>
 
 
 <footer style="display:grid;align-content:end">
 <div style="background-color:#222;color:#fff;text-align:center;padding:10px"> 
-&copy; Copyright 2023 - <a href="http://www.google.com">Zeno Streaming</a> 
+&copy; Copyright 2024 - <a href="http://www.google.com">Zeno Streaming</a> 
 </div>
 </footer>
 
