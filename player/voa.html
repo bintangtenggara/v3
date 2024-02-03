@@ -12,6 +12,16 @@
 
 <header id="header">
 <nav class="nav-menu">
+<ul>
+	<li><a href="https://play.google.com/store/apps/details?id=com.musicandinoperuonline.radio" target="_blank"><span>Descarga nuestra APP</span></a></li>
+	<li><a href="https://bit.ly/musicandino" target="_blank"><span>Publicidad</span></a></li>
+	<li><a href="https://www.facebook.com/GranadosPro/" target="_blank"><span>Facebook</span></a></li>
+	<li><a href="https://instagram.com/granadosproduccioneshd" target="_blank"><span>Instagram</span></a></li>
+	<li><a _blank="" href="https://bit.ly/musicandino"><span>Whatsapp</span></a></li>
+	<li><a href="https://www.tiktok.com/@granadosproduccioneshd" target="_blank"><span>tiktok</span></a></li>
+</ul>
+</nav>
+</header>
 <div style="height:100%">
 <div id="player"></div>
 <script src="https://cdn.bintangtenggarafm.com/js/hibrido.js?v=1.20.09.09c1"></script>
@@ -59,16 +69,7 @@ debug: "true",
 });
 </script> 
 
-<ul>
-	<li><a href="https://play.google.com/store/apps/details?id=com.musicandinoperuonline.radio" target="_blank"><span>Descarga nuestra APP</span></a></li>
-	<li><a href="https://bit.ly/musicandino" target="_blank"><span>Publicidad</span></a></li>
-	<li><a href="https://www.facebook.com/GranadosPro/" target="_blank"><span>Facebook</span></a></li>
-	<li><a href="https://instagram.com/granadosproduccioneshd" target="_blank"><span>Instagram</span></a></li>
-	<li><a _blank="" href="https://bit.ly/musicandino"><span>Whatsapp</span></a></li>
-	<li><a href="https://www.tiktok.com/@granadosproduccioneshd" target="_blank"><span>tiktok</span></a></li>
-</ul>
-</nav>
-</header>
+
 
 <div class="background_hora">
 <div id="relogio">3:00:05</div>
@@ -76,7 +77,7 @@ debug: "true",
 <script>
 function reloj() {
 let elementoID = document.getElementById('relogio');
-let horalocal = new Date().toLocaleTimeString('es');
+let horalocal = new Date().toLocaleTimeString('id');
 elementoID.innerHTML = horalocal;
 }
 setInterval(reloj, 1000);
