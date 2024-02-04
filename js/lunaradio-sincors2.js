@@ -256,7 +256,7 @@
                             var z = "",
                                 m = "";
                             1 == v.results.length ? (z = v.results[0].artworkUrl100,
-                                z = z.replace("100x100bb", "600x600bb"), w("COVER: " + z), "" != mb && (m = v.results[0].trackViewUrl + "&app=itunes&at=" + mb), R(z, m)) : R(ra, "")
+                                z = z.replace("100x100bb", "1200x1200bb"), w("COVER: " + z), "" != mb && (m = v.results[0].trackViewUrl + "&app=itunes&at=" + mb), R(z, m)) : R(ra, "")
                         } catch (l) {
                             R(ra, "")
                         }
@@ -1208,7 +1208,7 @@ if (w.metadatatechnic === "corsproxy") {
                     top: "0px",
                     left: "0px",
  "-webkit-filter": "blur(20px)", 
-                filter: "blur(5px)", //efecto blur desenfoque
+                filter: "blur(20px)", //efecto blur desenfoque
 
                     width: "100%",
                     height: "100%"
