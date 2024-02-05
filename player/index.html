@@ -1,40 +1,45 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/lunaradio-sincors2.js"></script>
 
-<div id="lunaradio" style="width:100%; height:100%;background: #000000 url(https://i.imgur.com/0CoFaAT.jpg) bottom / cover no-repeat;">loading...</div>			
+<div id="jembut" style="width:100%; height:100%;background: #000000 url(https://i.imgur.com/0CoFaAT.jpg) bottom / cover no-repeat;">loading...</div>			
 
-<script>
-$("#lunaradio").lunaradio({
-userinterface: "big", 
-backgroundcolor: "",
-fontcolor: "#ffffff",
-hightlightcolor: "#610094", 
-fontname: "Unica One", 
-googlefont: "Unica+One&display=swap", 
-fontratio: "0.4", 
-radioname: "Radio RBT", 
-scroll: "true", 
-coverimage: "js/logokis.jpg",
-onlycoverimage: "true",
-coverstyle: "animated",
-usevisualizer: "real", 
-visualizertype: "8", 
-metadatatechnic: "",
-ownmetadataurl: "", 
-streamurl: "https://momea.alhastream.com:8360", 
-streamtype: "icecast2", 
-icecastmountpoint: "/rbtfm",
-shoutcastpath: "/stream",
-shoutcastid: "1", 
-streamsuffix: "", 
-radionomyid: "", 
-radionomyapikey: "",
-radiojarid: "",  
-radiocoid: "",
-itunestoken: "1000lIPN", 
-metadatainterval: "5000", 
-volume: "100",
-debug: "false",
-autoplay: "true"
-});
-</script>
+<script type="text/javascript">
+		$("#jembut").lunaradio({
+            userinterface: "big",
+            backgroundcolor: "rgba(9,15,25,0.5)",
+            fontcolor: "#ffffff",
+            hightlightcolor: "#ef7f1a",
+            fontname: "ZCOOL XiaoWei",
+            googlefont: "ZCOOL+XiaoWei",
+            fontratio: "0.4",
+            radioname: "FM 95.6 MHz",
+            scroll: "true",
+            coverimage: "https://cdn.bintangtenggarafm.com/img/QTrnfVE.png",
+            onlycoverimage: "false",
+            coverstyle: "square",
+            usevisualizer: "real",
+            visualizertype: "8",
+            itunestoken: "1000lIPN",
+            metadatatechnic: "fallback", //fallback (use for zeno)
+            corsproxy: "",
+            usestreamcorsproxy: "false",
+            streamurl: "https://momea.alhastream.com/radio/8360",
+            streamtype: "Icecast2", //soport: zeno, icecast2, shoutcast2
+            idzeno: "r4mpcrfwfzzuv",
+            icecastmountpoint: "/rbtfm",
+            shoutcastpath: "/rbtfm",
+            shoutcastid: "1",
+            metadatainterval: "10000",
+            volume: "100",
+            debug: "false",
+            autoplay: "true",
+            displayliveicon: "false", 
+            visualizeropacity: "1.0",
+            multicolorvisualizer: "true",
+            color1: "#00FF00",
+            color2: "#ffff00",
+            color3: "#FF1F6F",
+            color4: "#FF1F6F", 
+            displayvisualizericon: "false"
+        });
+    </script>
