@@ -1,4 +1,40 @@
-<html><head><title>It works!</title></head><body><h1>It works!</h1>
-<p>This is the default web page for this server.</p>
-<p>The web server software is running but no content has been added, yet.</p>
-</body></html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/lunaradio-sincors.js"></script>
+
+<div id="lunaradio" style="width:100%; height:100%;background: #000000 url(https://i.imgur.com/0CoFaAT.jpg) bottom / cover no-repeat;">loading...</div>			
+
+<script>
+$("#lunaradio").lunaradio({
+userinterface: "big", 
+backgroundcolor: "",
+fontcolor: "#ffffff",
+hightlightcolor: "#610094", 
+fontname: "Unica One", 
+googlefont: "Unica+One&display=swap", 
+fontratio: "0.4", 
+radioname: "Radio KIISS FM Makassar", 
+scroll: "true", 
+coverimage: "js/logokis.jpg",
+onlycoverimage: "true",
+coverstyle: "animated",
+usevisualizer: "real", 
+visualizertype: "4", 
+metadatatechnic: "",
+ownmetadataurl: "", 
+streamurl: "https://a3.alhastream.com:4020", 
+streamtype: "icecast2", 
+icecastmountpoint: "/radio",
+shoutcastpath: "/stream",
+shoutcastid: "1", 
+streamsuffix: "", 
+radionomyid: "", 
+radionomyapikey: "",
+radiojarid: "",  
+radiocoid: "",
+itunestoken: "1000lIPN", 
+metadatainterval: "5000", 
+volume: "100",
+debug: "false",
+autoplay: "true"
+});
+</script>
