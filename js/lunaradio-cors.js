@@ -1,4 +1,11 @@
+/*
+ LUNA RADIO PLAYER V5.21.01.28
+ https://www.luna-universe.com
 
+ Copyright (C) VOCES PTM | 2023
+ https://www.vocesparatumarca.com
+
+*/
 (function(d, G) {
     "function" === typeof define && define.amd ? define(["jquery"], G) : d.jQuery ? G(d.jQuery) : G(d.Zepto)
 })(this, function(d, G) {
@@ -36,9 +43,10 @@
             e("Roboto:400");
             "" != eb && e(eb);
             a = "@keyframes " + c + "pulse { ";
-            a = a + "\t0% { \t  fill: rgba(255, 255, 255, 1.0);";
-            a = a + "\t} \t50% { \t  fill: rgba(212, 7, 7, 1.0); ";
-            a = a + "\t} \t100% { \t\tfill: rgba(255, 255, 255, 1.0); ";
+            a = a + "\t0% { \t  fill: rgba(" + f(A).r + ", " + f(A).g + ", " + f(A).b + ", 1.0);";
+            a = a + "\t} \t50% { \t  fill: rgba(" + f(u).r + ", " +
+                f(u).g + ", " + f(u).b + ", 1.0); ";
+            a = a + "\t} \t100% { \t\tfill: rgba(" + f(A).r + ", " + f(A).g + ", " + f(A).b + ", 1.0); ";
             a += "\t} }";
             d("head").append('<style type="text/css">' + a + "</style>");
             a = window.location.href.toString().toLocaleLowerCase();
@@ -256,7 +264,7 @@
                             var z = "",
                                 m = "";
                             1 == v.results.length ? (z = v.results[0].artworkUrl100,
-                                z = z.replace("100x100bb", "1200x1200bb"), w("COVER: " + z), "" != mb && (m = v.results[0].trackViewUrl + "&app=itunes&at=" + mb), R(z, m)) : R(ra, "")
+                                z = z.replace("100x100bb", "600x600bb"), w("COVER: " + z), "" != mb && (m = v.results[0].trackViewUrl + "&app=itunes&at=" + mb), R(z, m)) : R(ra, "")
                         } catch (l) {
                             R(ra, "")
                         }
@@ -282,9 +290,9 @@
                     "background-repeat": "no-repeat",
                     "background-size": "cover"
                 });
-                1 == ta ? d("#" + c + "coverwrapper2, #" + c + "smallcoverwrapper2").css({
+                1 == ta ? d("#" + c + "backgroundimage2, #" + c + "coverwrapper2, #" + c + "smallcoverwrapper2").css({
                     opacity: "0.0"
-                }) : d("#" + c + "coverwrapper1, #" + c + "smallcoverwrapper1").css({
+                }) : d("#" + c + "backgroundimage1, #" + c + "coverwrapper1, #" + c + "smallcoverwrapper1").css({
                     opacity: "0.0"
                 })
             }))
@@ -572,7 +580,7 @@ if (w.metadatatechnic === "corsproxy") {
                 transition: "fill 0.5s",
                 cursor: "pointer",
                 fill: A
-            }).html('<svg class="lunaradiovisualizericon" x="0px" y="0px" viewBox="0 0 800 800"><path d="M180.3,729.4h-72.4c-13.5,0-24.5-11-24.5-24.5V235.8c0-13.5,11-24.5,24.5-24.5h72.4c13.5,0,24.5,11,24.5,24.5v469.1\tC204.7,718.4,193.7,729.4,180.3,729.4"/><path d="M351,729.4h-72.4c-13.5,0-24.5-11-24.5-24.5V331.7c0-13.5,11-24.5,24.5-24.5H351c13.5,0,24.5,11,24.5,24.5v373.2\tC375.4,718.4,364.4,729.4,351,729.4"/><path d="M521.9,729.4h-72.4c-13.5,0-24.5-11-24.5-24.5V95.1c0-13.5,11-24.5,24.5-24.5h72.4c13.5,0,24.5,11,24.5,24.5v609.8\tC546.3,718.4,535.3,729.4,521.9,729.4"/><path d="M692.1,729.4h-72.4c-13.5,0-24.5-11-24.5-24.5V331.7c0-13.5,11-24.5,24.5-24.5h72.4c13.5,0,24.5,11,24.5,24.5v373.2\tC716.6,718.4,705.6,729.4,692.1,729.4"/></svg>').on("mouseenter",
+            }).html('<svg class="lunaradiovisualizericon" x="0px" y="0px" viewBox="0 0 24 24"><path d="M22 12L20 13L19 14L18 13L17 16L16 13L15 21L14 13L13 15L12 13L11 17L10 13L9 22L8 13L7 19L6 13L5 14L4 13L2 12L4 11L5 10L6 11L7 5L8 11L9 2L10 11L11 7L12 11L13 9L14 11L15 3L16 11L17 8L18 11L19 10L20 11L22 12Z"/></svg>').on("mouseenter",
                 function() {
                     d(this).css("fill", u)
                 }).on("mouseleave", function() {
@@ -735,8 +743,8 @@ if (w.metadatatechnic === "corsproxy") {
         }
 
         function wb(b) {
-            var a = document.createElement("div");
-            a.id = c + "backgroundimage";
+            var a = document.createElement("div"); //efect blur OFICIAL
+           a.id = c + "backgroundimage";
             b.appendChild(a);
             d("#" + c + "backgroundimage").css({
                 position: "absolute",
@@ -744,10 +752,10 @@ if (w.metadatatechnic === "corsproxy") {
                 top: "0px",
                 height: "100%",
                 width: "100%",
-                "-webkit-filter": "blur(40px)",
-                filter: "blur(40px)",
                 opacity: "1.0"
+    
             });
+            
             b = document.createElement("div");
             b.id = c + "backgroundimage1";
             a.appendChild(b);
@@ -825,7 +833,7 @@ if (w.metadatatechnic === "corsproxy") {
             });
             "circle" == Na && (d("#" + c + "coverwrapper, #" + c + "coverwrapper1, #" + c + "coverwrapper2").css({
                 "border-radius": "50%"
-            }), d("#" + c + "backgroundimage").css({
+            }), d("#" + c + "backgroundimage, #" + c + "backgroundimage1, #" + c + "backgroundimage2").css({
                 "border-radius": "50%"
             }))
         }
@@ -1204,14 +1212,14 @@ if (w.metadatatechnic === "corsproxy") {
                 });
                 d("#" + c + "backgroundimage").css({
                     "-webkit-filter": "saturate(1.2)",
+                    position: "absolute",
                     filter: "saturate(1.2)",
                     top: "0px",
                     left: "0px",
  "-webkit-filter": "blur(20px)", 
-                filter: "blur(20px)", //efecto blur desenfoque
-
+                filter: "blur(20px)",  //blur effect
                     width: "100%",
-                    height: "100%"
+                    height: "100%",
                 });
                 a = x / 8;
                 var h = a / 2,
@@ -2034,7 +2042,6 @@ if (w.metadatatechnic === "corsproxy") {
             lowerize: function(e) {
                 return e.toLowerCase()
             },
-
             major: function(e) {
                 return "string" === typeof e ? e.replace(/[^\d\.]/g, "").split(".")[0] : G
             },
@@ -2961,3 +2968,5 @@ if (w.metadatatechnic === "corsproxy") {
         })
     }
 })(jQuery);
+
+//]]>
