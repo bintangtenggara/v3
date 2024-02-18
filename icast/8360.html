@@ -16,11 +16,15 @@
 <script src="https://cdn.jsdelivr.net/jquery/3.0.0/jquery.min.js"></script>
 <script src="js/icast.js?v14000"></script>
 <script>
-    $("#strum").icast({
+    $("#stream").icast({
 	    URL: "https://sv.stri.my.id:8360",
 		version: "icecast",
 		mount_point: "rbtfm",
+		stream_id: 1,
 		show_listeners: false,
+		enable_cors: false,
+		autoplay: true,
+		logo: "https://i.imgur.com/sxFQM0Z.png"
     })
 </script>
 </body>
