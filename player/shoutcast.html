@@ -37,44 +37,55 @@
        Streaming AAC+
     </div>
     <script type="text/javascript">
-		$("#jembut").lunaradio({
-            userinterface: "big",
-            backgroundcolor: "rgba(9,15,25,0.5)",
-            fontcolor: "#ffffff",
-            hightlightcolor: "#ef7f1a",
-            fontname: "ZCOOL XiaoWei",
-            googlefont: "ZCOOL+XiaoWei",
-            fontratio: "0.4",
-            radioname: "FM 95.6 MHz",
-            scroll: "true",
-            coverimage: "https://i.imgur.com/1EiaRef.png",
-            onlycoverimage: "false",
-            coverstyle: "square",
-            usevisualizer: "real",
-            visualizertype: "8",
-            itunestoken: "1000lIPN",
-            metadatatechnic: "corsproxy", //fallback (us for zeno)
-            corsproxy: "https://cors-proxy.elfsight.com/",
-            usestreamcorsproxy: "false",
-            streamurl: "https://asv.alhastream.com/radio/3210",
-            streamtype: "shoutcast2", //suport: zeno, icecast2, shoutcast2
-            idzeno: "r4mpcrfwfzzuv",
-            icecastmountpoint: "",
-            shoutcastpath: "/1",
-            shoutcastid: "1",
-            metadatainterval: "5000",
-            volume: "100",
-            debug: "false",
-            autoplay: "true",
-            displayliveicon: "false", 
-            visualizeropacity: "1.0",
-            multicolorvisualizer: "true",
-            color1: "#00FF00",
-            color2: "#ffff00",
-            color3: "#FF1F6F",
-            color4: "#FF1F6F", 
-            displayvisualizericon: "false"
-        });
+		window.onload = function () {
+	   $("#jembut").lunaradio({
+		   token: "aWlpIGFgXltoV2JXZGcgVWFf",
+			userinterface: "big", 
+			backgroundcolor: "rgba(9,15,25,0.5)",
+			fontcolor: "#ffffff",
+			hightlightcolor: "#ef7f1a", 
+			fontname: "ZCOOL XiaoWei", 
+			googlefont: "ZCOOL+XiaoWei", 
+			fontratio: "0.4", 
+			radioname: "FM 95.6 MHz", 
+			scroll: "true", 
+			coverimage: "",
+			coverstyle: "square",
+			usevisualizer: "real", 
+			visualizertype: "8",
+			multicolorvisualizer: "true",
+			visualizeropacity: "1.0",
+			itunestoken: "1000lIPN", 
+			metadatatechnic: "corsproxy",
+			ownmetadataurl: "", 
+			corsproxy: "",
+			usestreamcorsproxy: "false",
+			streamurl: "https://asv.alhastream.com/radio/3210",
+			streamtype: "shoutcast2", 
+			icecastmountpoint: "/rbtradio", 
+			radionomyid: "", 
+			radionomyapikey: "",
+			radiojarid: "",
+			radiozenoid: "",
+			radiocoid: "",
+			shoutcastpath: "/rbtfm?type=https&amp;nocache=377274",
+			shoutcastid: "1", 
+			streamsuffix: "", 
+			metadatainterval: "5000", 
+			displayliveicon: "false", 
+			displayvisualizericon: "false",
+			visualizeropacity: "1.0", 
+			multicolorvisualizer: "true", 
+			color1: "#00FF00", 
+			color2: "#ffff00", 
+			color3: "#FF1F6F", 
+			color4: "#FF1F6F",
+			volume: "100",
+			debug: "false",
+			autoplay: "true"
+    	});
+
+	};
     </script>
 </body>
 </html>
