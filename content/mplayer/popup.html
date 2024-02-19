@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Modern Radio Player</title>
+       
+		<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.css" media="all" /><!-- playlist scroll -->
+        <link rel="stylesheet" type="text/css" href="css/_global.css" />
+        <link id="mrp-css" rel="stylesheet" type="text/css" href="css/fixed.css" />
+
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                border:0;
+                outline:none;
+            }
+            a{ 
+                text-decoration: none; 
+            }
+            html{
+                overflow: hidden;
+            }
+            body{
+                background:#d6d6d6;
+            }
+            .mrp-wrapper-popup{
+                top:0!important;
+                bottom:auto!important;
+                overflow-x:hidden; 
+                margin: 0!important;
+            }
+        </style>
+
+        <script src="js/new.js"></script>			
+        <script>
+	
+            var hasLocalStorage = MRPUtils.hasLocalStorage(),
+            parent_wrapper_id,
+            instance,
+            closeDone;    
+
+            window.onbeforeunload = function(){
+                if(closeDone)return;
+                closeDone = true;
+                if(hasLocalStorage)localStorage.removeItem('mrp_popup');
+
+                var parent_window = window.opener;
+                if(parent_window && parent_window.mrpPopupClosed != undefined){
+                    try {
+                        parent_window.mrpPopupClosed(parent_wrapper_id, instance.getCounter());
+                    }catch(e){console.log(e)}
+                }
+            }
+            window.onunload = function(){
+                if(closeDone)return;
+                closeDone = true;
+                if(hasLocalStorage)localStorage.removeItem('mrp_popup');
+
+                var parent_window = window.opener;
+                if(parent_window && parent_window.mrpPopupClosed != undefined){
+                    try {
+                        parent_window.mrpPopupClosed(parent_wrapper_id, instance.getCounter());
+                    }catch(e){console.log(e)}
+                }
+            }
+            /*document.onpagehide = function(){
+                if(hasLocalStorage)localStorage.removeItem('mrp_popup');
+            }*/
+
+            document.addEventListener("DOMContentLoaded", function(event) { 
+                var parent_window = window.opener;
+                if(parent_window && parent_window.mrpNotifyParent != undefined){
+                    try {
+                        parent_window.mrpNotifyParent();
+                    }catch(e){
+                        alert('mrpNotifyParent error: ' + e.message);
+                        self.close();
+                    }
+                }
+            }); 
+
+            function initPopup(wrapper, wrapper_id, playlist_list, settings, css) {
+
+                parent_wrapper_id = wrapper_id;
+
+                if(settings.popupWindowTitle)document.title = settings.popupWindowTitle;
+
+                if(hasLocalStorage)localStorage.setItem('mrp_popup',1);
+
+                if(css)document.head.append(css);
+                else if(settings.cssUrl)document.getElementById('mrp-css').setAttribute('href', settings.cssUrl);
+
+                if(playlist_list) document.body.insertAdjacentHTML('afterbegin', playlist_list);
+                document.body.insertAdjacentHTML('afterbegin', wrapper);
+
+                //some changes, remove popup button
+                var wrapper = document.getElementById(wrapper_id)
+                wrapper.classList.add('mrp-wrapper-popup')
+                wrapper.classList.remove('mrp-player-opened')
+                if(wrapper.querySelector('.mrp-popup-toggle'))wrapper.querySelector('.mrp-popup-toggle').remove();
+                if(wrapper.querySelector('.mrp-player-collapse'))wrapper.querySelector('.mrp-player-collapse').remove(); 
+                if(wrapper.querySelector('.mrp-mini'))wrapper.querySelector('.mrp-mini').remove();
+
+                instance = new mrp(wrapper, settings);
+
+                return instance;//for api
+
+            }
+
+        </script>
+        
+	</head>
+	<body>
+
+	</body>
+</html>
