@@ -12,7 +12,7 @@
 			type: "/;type=mp3",
             streampath: "/rbtfm?icy=https",			
 			enable_cors: false,
-			cors: "https://plugstream.herokuapp.com",			
+			cors: "https://cors-proxy.elfsight.com",			
 			artwork: true,
             logo: "img/cover.png",
 			servertitle: "My Radio Title", //For Shoutcast v1 server
