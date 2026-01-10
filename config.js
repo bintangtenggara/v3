@@ -12,7 +12,7 @@ var settings = {
     'radio_name': 'Live Bintang Tenggara',
 
     // URL of streaming
-    'url_streaming': 'https://sv.stri.my.id/listen/radio_bintang_tenggara_2.0/rbtfm',
+    'url_streaming': 'https://sv.stri.my.id:3350/rbtfm',
 
     //NOW PLAYING AzuraCast API.
     'api_url': 'https://sv.stri.my.id/api/nowplaying/27',
