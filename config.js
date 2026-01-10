@@ -29,5 +29,5 @@ var settings = {
     'next_song': true,
 
     // Path to default cover art when none are found
-    'default_cover_art': 'https://i.imgur.com/5w6Eb0u.png',
+    'default_cover_art': 'https://live.staticflickr.com/65535/53459011184_1df18fcc82_b.jpg',
 };
