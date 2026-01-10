@@ -75,16 +75,16 @@ function Page() {
     // Default cover art
     var urlCoverArt = DEFAULT_COVER_ART; 
     // Defining Track Backgrounds - Above
-        const Commercial_Break = 'https://live.staticflickr.com/65535/55032544297_53d5328f81_z.jpg';
+        const Commercial_Break = 'https://raw.githubusercontent.com/warningfm/v3/cast/img/podUnZj.png';
         const Bintang_Tenggara = 'https://cdn.bintangtenggarafm.com/img/rbt-cover.png';
         const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
-        const TS = 'https://live.staticflickr.com/65535/55033707504_f98af8838c_z.jpg';
+        const TS = 'https://raw.githubusercontent.com/warningfm/v3/cast/img/vAFxMxc.png';
         const Dengarkami = 'https://live.staticflickr.com/65535/53972769374_6850dd307a_b.jpg';
         const jingle = 'https://lastfm.freetls.fastly.net/i/u/ar0/a25b0e8fa1772422c6ebb3dd61316df2.png';
         const TANDAWAKTUSHOLATDHUHUR = 'https://live.staticflickr.com/65535/53815587960_2ded7e8990_z.jpg';
         const ASHAR = 'https://live.staticflickr.com/65535/53808429057_45e11e4986_z.jpg';
         const ADZANMAGHRIB = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNqNb72rVTrjbv4OaLt1qAFkjySlaFJp34YyC_XJ6RNtoBXq_bYSp8cmubhyphenhyphenKBUxxytuneVwHHCSMmomBwSYN4LdmH6QXTV1e5YIkjTS0677w_lnuMqX3isz5WIhFO_6pAHJriBkQyevuv5AgH1_hpsoQYsliB_5KsyFzXi2STQ9GGKWIB9l5IiAg8_uuc/s1600/sXTgm2j.jpg';
-        const OpeningRadio = 'https://cdn.bintangtenggarafm.com/img/oJTOhsL.jpg';
+        const OpeningRadio = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirhlnLe1cXHdeIMNZ0q1yefm-AYwhuUwE5vbU8vVw3zf80cYPBS-9SBtwO2zUmRlniZLCT2zsRRVyFq5UANxWC94PAUJ9tIAYfKrXDHYHls-hWpf5NzM0PEEC1honYHAbqXiEiskhjlc2Yd0VdjAf-yIAZnI_vCwMYPGZ8isbCbRPhhph4zoB2GE6bZAjO/s1600/opeNing.jpg';
         const LAGUPENUTUPRADIO = 'https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/ec/3f/64/ec3f643b-0ffd-eb61-9ccf-c8d2c027594f/3ad3589a-548e-4b13-970c-83a2937c7d5c.jpg/1200x1200bb.jpg';
         const Citizen = 'https://thumbs2.imgbox.com/b1/29/LxXCnvNr_t.jpg';
         const JELAJAHDESA = 'https://thumbs2.imgbox.com/7e/dc/vOGdajpd_t.jpg';
@@ -215,10 +215,10 @@ function Page() {
   
   // Artist Covers - Below 
    this.refreshCover = function (song = '', artist) {
-        const Commercial_Break = 'https://live.staticflickr.com/65535/55032544297_53d5328f81_z.jpg';
+        const Commercial_Break = 'https://raw.githubusercontent.com/warningfm/v3/cast/img/podUnZj.png';
         const Bintang_Tenggara = 'https://cdn.bintangtenggarafm.com/img/rbt-cover.png';
         const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
-        const TS = 'https://live.staticflickr.com/65535/55033707504_f98af8838c_z.jpg';
+        const TS = 'https://raw.githubusercontent.com/warningfm/v3/cast/img/vAFxMxc.png';
         const Dengarkami = 'https://live.staticflickr.com/65535/53972769374_6850dd307a_b.jpg';
         const JINGLE = 'https://lastfm.freetls.fastly.net/i/u/ar0/a25b0e8fa1772422c6ebb3dd61316df2.png';
         const TANDAWAKTUSHOLATDHUHUR = 'https://live.staticflickr.com/65535/53815587960_2ded7e8990_z.jpg';
