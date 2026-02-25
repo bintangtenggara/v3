@@ -4,7 +4,6 @@ jQuery(document).ready(function($){
     sourcePath:"",
     activePlaylist:".playlist1",
     volume:0.75,
-    autoPlay:true,
     useScroll:true,
     scrollOrientation:"horizontal",
     scrollTheme:"minimal-dark",
@@ -12,9 +11,9 @@ jQuery(document).ready(function($){
     lastPlayedInterval:10000,
     createHistoryList:true,
     getHistoryArtwork:true,
-    defaultHistoryArtwork: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWeI_jc8OFPc3AAMh32jSMjX0WCCjfSN_LVG3_-e6LyMLy5b0HvHX2LoWWeX2X_9O2w-Ay5eflh0mBhSJITekyEBRgtJQDoLf5RpBAOC4P37NNVAdYTgYNSK5A8dAZgyVpsRAeyJai9xCNsuuXZz4-EFMWY3HaJs91H1XAX85XpVGODGTJ_8XYIM1c4ChL/s1600/nocoverart.jpg",
+    defaultHistoryArtwork: "https://cdn.bintangtenggarafm.com/img/cover-rbtfm.png",
     getPlayerArtwork:true,
-    defaultPlayerArtwork: "https://warningfm.github.io/v3/images/1d205655ef29e14a8255c89fe2383a41.jpg",
+    defaultPlayerArtwork: "https://cdn.bintangtenggarafm.com/img/cover-rbtfm.png",
     createRadioList:false,
     };
     $("#mrp-wrapper").mrp(settings);
@@ -536,7 +535,7 @@ var mrpjq = jQuery;
         var a = g[y].artist,
           b = g[y].title;
         for (c = 0; c < Za; c++) a = pb(a), b = qb(b);
-        var c = I[C] + "https://itunes.apple.com/search?type=jsonp&term==" + encodeURI(a) + "-" + encodeURI(b) + "&media=music&limit=1";
+        var c = I[C] + "https://itunes.apple.com/search?type=jsonp&term=" + encodeURI(a) + "-" + encodeURI(b) + "&media=music&limit=1";
         a = new XMLHttpRequest;
         a.onerror = function (a) {};
         a.onreadystatechange = function () {
@@ -629,7 +628,7 @@ var mrpjq = jQuery;
         var d = a.thumb != z ? a.thumb.replace("100x100bb", "128x128bb") : z,
           f = a.thumb != z ? a.thumb.replace("100x100bb", "192x192bb") : z,
           e = a.thumb != z ? a.thumb.replace("100x100bb", "256x256bb") : z,
-          g = a.thumb != z ? a.thumb.replace("100x100bb", "384x384bb") : z;
+          g = a.thumb != z ? a.thumb.replace("100x100bb", "640x640bb") : z;
         navigator.mediaSession.metadata = new MediaMetadata({
           title: a.title,
           artist: a.artist,
@@ -811,11 +810,11 @@ var mrpjq = jQuery;
       useKeyboardNavigationForPlayback: !1,
       scrollOrientation: "vertical",
       scrollTheme: "minimal",
-      cors: "https://plugstream.herokuapp.com/",
+      cors: "https://zet.pluginsandthemes.ro/",
       getPlayerArtwork: !0,
       getHistoryArtwork: !1,
       createHistoryList: !0,
-      playerArtworkSize: "256x256bb",
+      playerArtworkSize: "640x640bb",
       instanceName: "player" + Math.floor(1E6 * Math.random()),
       defaultHistoryArtwork: "data/default_artwork/star_small.png",
       defaultPlayerArtwork: "data/default_artwork/podcast.png",
