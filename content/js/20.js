@@ -632,7 +632,8 @@ var mrpjq = jQuery;
             else if (a == 'Second Civil') {var z = Second_Civil;}
             else if (a == 'Ismi Azis') {var z = Ismi_Azis;}
             else if (a == 'IKLAN') {var z = IKLAN;}
-            else if (a == 'Station Offline') {var z = Station_Offline;}
+            else if (a == 'Station Offline') {var z = Station_Offline;} 
+            else {var z = ta;}
         for (c = 0; c < Za; c++) a = pb(a), b = qb(b);
         var c = I[C] + "https://itunes.apple.com/search?type=jsonp&term=" + encodeURI(a) + "-" + encodeURI(b) + "&media=music&limit=1";
         a = new XMLHttpRequest;
