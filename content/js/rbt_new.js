@@ -534,7 +534,7 @@ var mrpjq = jQuery;
       else if (g[y].thumb) {
         var a = g[y].artist,
             b = g[y].title;
-        const Commercial_Break = 'https://thumbs2.imgbox.com/08/d6/pKsK3wQM_t.png';
+        const Commercial_Break = 'https://live.staticflickr.com/65535/55032544297_53d5328f81_z.jpg';
         const Bintang_Tenggara = 'https://cdn.bintangtenggarafm.com/img/rbtfm-640.png';
         const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
         const TS = 'https://startsafety.uk/cdn/shop/files/start-traffic-543.1-part-time-signals-main_grande.jpg?v=1722384698';
