@@ -6,7 +6,7 @@
 		<title>Modern Radio Player with Playlist</title>
        
 		<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.css" media="all" /><!-- playlist scroll -->
-        <link rel="stylesheet" type="text/css" href="css/global.css" />
+        <link rel="stylesheet" type="text/css" href="css/_global.css" />
 	    <link id="mrp-css" rel="stylesheet" type="text/css" href="css/default.css" />
 
         <style type="text/css">
@@ -21,19 +21,19 @@
             text-decoration: none; 
         }
         body,html{
-            background-color: #d6d6d6;
+            background-color: #FAFAFA;
         }
 
         #mrp-wrapper{
             position:relative;
             font-family: Arial, Helvetica, sans-serif;
             max-width:320px;
-            margin: 50px auto;
+            margin: 0px auto;
         }
             
         </style>
 
-        <script src="js/new.js?1"></script>		
+        <script src="js/new.js"></script>		
 
         <script type="text/javascript">
 
@@ -51,14 +51,14 @@
                     scrollTheme:"minimal-dark",
                     lastPlayedInterval:10000,
                     //playlistScrollType: 'browser',
-                    createHistoryList:false,
+                    createHistoryList:true,
                     getHistoryArtwork:true,
-                    defaultHistoryArtwork: "data/default_artwork/star_small.png",
+                    defaultHistoryArtwork: "https://cdn.bintangtenggarafm.com/img/rbtfm-640.png",
                     getPlayerArtwork:true,
-                    defaultPlayerArtwork: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWeI_jc8OFPc3AAMh32jSMjX0WCCjfSN_LVG3_-e6LyMLy5b0HvHX2LoWWeX2X_9O2w-Ay5eflh0mBhSJITekyEBRgtJQDoLf5RpBAOC4P37NNVAdYTgYNSK5A8dAZgyVpsRAeyJai9xCNsuuXZz4-EFMWY3HaJs91H1XAX85XpVGODGTJ_8XYIM1c4ChL/s1600/nocoverart.jpg",
+                    defaultPlayerArtwork: "https://cdn.bintangtenggarafm.com/img/rbtfm-640.png",
                     createRadioList:true,
                     enableCors:false,
-                    //cors:"https://plugstream.herokuapp.com/",
+                    //cors:"https://cors-proxy.cooks.fyi/",
 
                     useFullTitle:false,
 
@@ -258,8 +258,8 @@
 
                 <div class="mrp-info">
 
-                    <p class="mrp-player-title"></p>
                     <p class="mrp-player-artist"></p>
+                    <p class="mrp-player-title"></p>
 
                     <div class="mrp-ad-interface">
                         <div class="mrp-ad-interface-inner">
@@ -287,11 +287,11 @@
                   
             </div>
 
-            <div class="mrp-playlist-holder">
+            <!--<div class="mrp-playlist-holder">-->
 
-                <div class="mrp-playlist-bar">
-                    <div class="mrp-history-title mrp-title-active">History</div>
-                    <div class="mrp-station-title">Stations</div>
+                <!--<div class="mrp-playlist-bar">-->
+                    <!--<div class="mrp-history-title mrp-title-active">Stations</div>-->
+                    <!--<div class="mrp-station-title">Streams</div>
                 </div>
 
                 <div class="mrp-history-inner">
@@ -302,7 +302,7 @@
                     <div class="mrp-playlist-content"></div>
                 </div>
 
-            </div>
+            </div>-->
 
             <div class="mrp-share-holder">
                 <div class="mrp-share-holder-inner">
@@ -397,20 +397,19 @@
 
                   <div class="mrp-playlist-item" data-type="icecast" data-radio-url="https://s1.forstream.it:8300/soffioHQ" data-radio-title="icecast" ></div>
  -->
+ 
+                <div class="mrp-playlist-item" data-type="shoutcast" data-radio-url="https://b1.alhastream.com:3310/;" data-radio-title="ROCK RADIO SI" data-radio-thumb="data/stations/ROCK RADIO SI.jpg" ></div>
            
 
-                <div class="mrp-playlist-item" data-type="icecast" data-radio-url="http://anzzz.mooo.com:8000/jerry" data-radio-title="test" data-radio-thumb=""></div>
+                <div class="mrp-playlist-item" data-type="icecast" data-radio-url="https://sv.stri.my.id:3350/rbtfm" data-radio-title="test" data-radio-thumb=""></div>
 
 
-                <div class="mrrp-playlist-item" data-media-id="5" data-type="shoutcast" data-radio-url="https://cast10.plugstreaming.com:2020/stream/tdn981" data-version="2" data-metadata-url="https://cast10.plugstreaming.com:2000/json/stream/tdn981" data-history-url="http://cast10.plugstreaming.com:8016/played.html" data-radio-title="tdn 98.1 fm" data-radio-thumb="https://plugmedia.co/play/wp-content/uploads/2021/01/caratula-981.jpg"></div>
+                <div class="mrrp-playlist-item" data-media-id="1" data-type="shoutcast" data-radio-url="https://asv.alhastream.com:4070" data-version="2" data-metadata-url="https://cast10.plugstreaming.com:2000/json/stream/tdn981" data-history-url="http://cast10.plugstreaming.com:8016/played.html" data-radio-title="tdn 98.1 fm" data-radio-thumb="https://plugmedia.co/play/wp-content/uploads/2021/01/caratula-981.jpg"></div>
 
 <!--
                 <div class="mrp-playlist-item" data-type="shoutcast" data-radio-url="https://cast1.asurahosting.com/proxy/david127/stream" data-metadata-url="https://cast1.asurahosting.com/proxy/david127/stats?sid=1&json=1" data-radio-title="test" data-radio-thumb="data/stations/ROCK RADIO SI.jpg" ></div>
 -->
         
-
-                <div class="mrp-playlist-item" data-type="shoutcast" data-radio-url="http://stream.rockradio.si:9034/;" data-radio-title="ROCK RADIO SI" data-radio-thumb="data/stations/ROCK RADIO SI.jpg" ></div>
-
                 <div class="msrp-playlist-item" data-type="shoutcast" data-radio-url="https://sc.schwarze-welle.de:7500/;" data-radio-title="https test"></div>
 
 
