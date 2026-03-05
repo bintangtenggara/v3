@@ -1,3 +1,14 @@
+/*
+The MIT License (MIT) 
+PARAN JARE RIKO
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
 
 var mrpjq = jQuery;
 (function (d) {
@@ -156,7 +167,7 @@ var mrpjq = jQuery;
           window.playlistScrollLoading = !0;
           var h = document.createElement("script");
           h.type = "text/javascript";
-          h.src = MRPUtils.qualifyURL(Xa + "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js");
+          h.src = MRPUtils.qualifyURL(Xa + "https://warningfm.github.io/v3/js/jquery.mCustomScrollbar.concat.min.js");
           h.onload = h.onreadystatechange = function () {
             this.readyState && "complete" != this.readyState || (oa(a), window.playlistScrollLoading = !1)
           };
